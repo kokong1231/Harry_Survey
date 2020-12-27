@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import '../App.css';
 import '../App.scss';
 import SurveyPage from './SurveyPage';
@@ -35,7 +35,7 @@ class Main extends Component {
                     <div>
                         <div className="Inputbox">
                             <div className="form__group">
-                                <input type="input" className="form__field" placeholder="Name" name="name" id='name' autocomplete="off" required />
+                                <input type="input" className="form__field" placeholder="Name" name="name" id='name' autocomplete="nope" required />
                                 <label for="name" className="form__label">이름을 입력하세요. (Please enter your name)</label>
                                 <input className="Namebutton" type="submit" value="시작!" onClick={this.handleClick} />
                             </div>
