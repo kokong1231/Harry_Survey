@@ -1,12 +1,6 @@
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap');
 
-@font-face {
-  font-family: "English_harry";
-  font-weight: 200;
-  src: url("./Fonts/English_harry.ttf") format("truetype");
-}
-
 .Test_value {
   font-size: 70px;
   color: white;
@@ -89,6 +83,7 @@ body {
   perspective: 1500px;
   position: relative;
 }
+
 .toggle {
   color: #fff;
   display: none;
@@ -99,17 +94,17 @@ body {
 .menu {
   margin: 100px auto;
   position: relative;
-  background: #62278d;
-  background: -moz-linear-gradient(top,  #62278d 0%, #2cc09b 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#62278d), color-stop(100%,#2cc09b));
-  background: -webkit-linear-gradient(top,  #62278d 0%,#2cc09b 100%);
-  background: -o-linear-gradient(top,  #62278d 0%,#2cc09b 100%);
-  background: -ms-linear-gradient(top,  #62278d 0%,#2cc09b 100%);
-  background: linear-gradient(to bottom,  #62278d 0%,#2cc09b 100%);
+  background: #0e0846;
+  background: -moz-linear-gradient(top,  #0e0846 0%, #251d6e 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0c0313), color-stop(100%,#251d6e));
+  background: -webkit-linear-gradient(top,  #0c0313 0%,#251d6e 100%);
+  background: -o-linear-gradient(top,  #0c0313 0%,#251d6e 100%);
+  background: -ms-linear-gradient(top,  #0c0313 0%,#251d6e 100%);
+  background: linear-gradient(to bottom,  #0c0313 0%,#251d6e 100%);
   width: 300px;
   border-width: 20px 0;
   border-style: solid;
-  border-color: #001c47;
+  border-color: #1c2e47;
   color: #fff;
   height: 540px;
   -webkit-transform-style: preserve-3d;
@@ -131,6 +126,15 @@ input.toggle:checked ~ .menu {
        -o-transform: translateY(-150px) rotateX(45deg) rotateZ(45deg);
           transform: translateY(-150px) rotateX(45deg) rotateZ(45deg);
 }
+
+input.toggle:checked ~ .menu:hover {
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
 .menu:before {
   content: '';
   position: absolute;
@@ -161,13 +165,13 @@ input.toggle:checked ~ .menu {
   border-width: 20px 0;
   border-style: solid;
   border-color: #00122e;
-  background: #62278d;
-  background: -moz-linear-gradient(top,  #62278d 0%, #2cc09b 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#62278d), color-stop(100%,#2cc09b));
-  background: -webkit-linear-gradient(top,  #62278d 0%,#2cc09b 100%);
-  background: -o-linear-gradient(top,  #62278d 0%,#2cc09b 100%);
-  background: -ms-linear-gradient(top,  #62278d 0%,#2cc09b 100%);
-  background: linear-gradient(to bottom,  #62278d 0%,#2cc09b 100%);
+  background: #0c0313;
+  background: -moz-linear-gradient(top,  #0c0313 0%, #251d6e 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0c0313), color-stop(100%,#251d6e));
+  background: -webkit-linear-gradient(top,  #0c0313 0%,#251d6e 100%);
+  background: -o-linear-gradient(top,  #0c0313 0%,#251d6e 100%);
+  background: -ms-linear-gradient(top,  #0c0313 0%,#251d6e 100%);
+  background: linear-gradient(to bottom,  #0c0313 0%,#251d6e 100%);
   pointer-events: none;
 }
 .menu .top {
@@ -228,7 +232,6 @@ input.toggle:checked ~ .menu {
   width: 40px;
   height: 40px;
   outline: 0 none;
-  float: right;
   cursor: pointer;
   -webkit-transform: translateZ(1px);
      -moz-transform: translateZ(1px);
@@ -318,17 +321,13 @@ input.toggle:checked ~ .menu {
 .menu .middle li:hover:before,
 .menu .middle li:focus:before {
   content: none;
-  font-family: 'FontAwesome';
+  font-family: 'Black And White Picture', sans-serif;
   font-size: 16px;
   position: absolute;
   top: 15px;
   left: 20px;
 }
-.menu .middle li:focus,
-.menu .middle li:focus:after {
-  color: #3EAC9E;
-  background-color: #62278d;
-}
+
 .menu .middle li .fa {
   padding-right: 15px;
 }
@@ -401,3 +400,4 @@ input.toggle:checked ~ .menu .glass-reflection {
      -moz-box-shadow: inset 0px -40px 150px -50px rgba(255, 255, 255, 0.15);
           box-shadow: inset 0px -40px 150px -50px rgba(255, 255, 255, 0.15);
 }
+

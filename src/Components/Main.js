@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import '../App.scss';
 import SurveyPage from './SurveyPage';
+// import SmokeElment from "smoke-effect-react";
 
 class Main extends Component {
 
@@ -22,6 +23,12 @@ class Main extends Component {
         if ( this.state.page_change === 0 ) {
             return (
                 <div className="Main">
+                    {/* <SmokeElment 
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/quickText.png"
+                        opacity="1"
+                        smokeSrc="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png"
+                        smokeOpacity="0.3"
+                         /> */}
                     <div className="Comment">
                         <div className="Maincomment">
                             해리포터 세계 속 당신의 기숙사는 어디로 배정될까요?<br/><br/>
