@@ -721,12 +721,101 @@ class SurveyPage extends Component {
                     </div>
                 )
 
+                // <h1 className="Test_value">{this.thisRank(this.state.gryffin, this.state.slytherin, this.state.hufflepuf, this.state.ravenclaw)}!</h1>
             default :
-                return (
-                    <div>
-                        <h1 className="Test_value">{this.thisRank(this.state.gryffin, this.state.slytherin, this.state.hufflepuf, this.state.ravenclaw)}!</h1>
-                    </div>
-                )
+                if ( this.thisRank(this.state.gryffin, this.state.slytherin, this.state.hufflepuf, this.state.ravenclaw) === '그리핀도르' ) {
+                    return (
+                        <div className="final_page_griffin">
+                            <h1 className="Test_value grifn">그리핀도르</h1>
+                            <div className="Result_main">
+                                당신은 그리핀도르와 어울리는 성향을 가졌군요.<br />
+                                불사조의 기사단과 오러의 다수가 그리핀도르 출신으로 용감함과 정의를 가치있게 생각하는 사람들입니다.
+                                <br /><br />
+                                창립자인 고드릭 그리핀도르는 이렇게 말했습니다. '그 이름에 걸맞는 용기를 가진 아이들은 누구나 가르치도록 하자.'<br />
+                                당신은 용기있고 기사도 정신이 두렷한 사람입니다.<br />
+                                조금이라도 더 앞에 나서서 행동하지요.<br />
+                                <br />
+                                그리핀도르의 상징인 붉은색과 금색 처럼 당신은 용기있고 고귀한 사람입니다.
+                                <div className="Result_sub">
+                                    그리핀도르 대표 인물 : 해리포터, 시리우스 블랙, 론 위즐리, 헤르미온느 그레인저
+                                </div>
+                            </div>
+                        </div>
+                    )
+                }
+
+                else {
+                    if ( this.thisRank(this.state.gryffin, this.state.slytherin, this.state.hufflepuf, this.state.ravenclaw) === '슬리데린' ) {
+                        return (
+                            <div className="final_page_slytherin">
+                                <h1 className="Test_value sli">슬리데린</h1>
+                                <div className="Result_main">
+                                당신은 슬리데린과 어울리는 성향을 가졌군요.<br />
+                                어둠의 마법사가 가장 많이 배출되었고, 순수혈통이 가장 많은 기숙사입니다.<br />
+                                <br />
+                                창립자인 살라자르 슬리데린는 이렇게 말했습니다. '가장 순수한 혈통을 지닌 이들만 가르치도록 하자.'<br />
+                                당신은 야망을 갖고 명예와 권력을 중요하게 생각합니다.<br />
+                                나의 행복과 이익을 위해서는 무엇이든 할 수 있습니다.<br />
+                                <br />
+                                어둠의 마법사가 가장 많이 배출된 기숙사이지만, 야망을 위해 당당히 걸어가는 이들은 높은 권력을 갖고 있습니다.<br />
+                                <br />
+                                슬리데린의 상징인 초록색과 은색처럼 차분하고 냉정한 판단을 가졌군요.
+                                    <div className="Result_sub">
+                                        슬리데린 대표 인물 : 드레이코 말포이, 세베루스 스네이프, 벨라트릭스 블랙, 톰 리들(볼드포트)
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    }
+
+                    else {
+                        if ( this.thisRank(this.state.gryffin, this.state.slytherin, this.state.hufflepuf, this.state.ravenclaw) === '후플푸프' ) {
+                            return (
+                                <div className="final_page_hufflepuf">
+                                    <h1 className="Test_value huf">후플푸프</h1>
+                                    <div className="Result_main">
+                                    당신은 후플푸프와 어울리는 성향을 가졌군요.<br />
+                                    선량하고 옳다고 생각하는 일에는 망설임 없이 다가갑니다.<br />
+                                    <br />
+                                    창립자인 헬가 후플푸프는 이렇게 말했습니다. '나는 모든 아이들을 차별없이 가르칠 것이다.'<br />
+                                    후플푸프 학생들은 정직하고 공평하며 성실합니다.<br />
+                                    또한, 근성과 끈기가 엄청나지요.<br />
+                                    모든 사람에게 편견없이 다가가고 올바른 판단을 내립니다.<br />
+                                    <br />
+                                    올바른 일을 위해 일하는 마법부 직원의 다수가 후플푸프 출신입니다.<br />
+                                    <br />
+                                    후플푸프의 상징인 노란색과 검은색처럼 모든 생명에게 밝고 명랑하게 다가가며 옳은 일인지 깊게 생각할 줄 알고있습니다.
+                                        <div className="Result_sub">
+                                            후플푸프 대표 인물 : 뉴트 스캐맨더, 세드릭 디고리, 한나 아보트
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        }
+
+                        else {
+                            return (
+                                <div className="final_page_ravenclaw">
+                                    <h1 className="Test_value rav">래번클로</h1>
+                                    <div className="Result_main">
+                                    당신은 래번클로와 어울리는 성향을 가졌군요.<br />
+                                    똑똑하고 지혜로우며 현명합니다.<br />
+                                    <br />
+                                    창립자인 로웨나 래번클로는 이렇게 말했습니다. '가장 똑똑한 아이들만 가르치도록 하자.'<br />
+                                    지혜롭고 현명한 당신은 독창성이 뛰어납니다.<br />
+                                    창립이념과 같이 래번클로 학생들은 대부분 뛰어난 성적을 갖고있습니다.<br />
+                                    또한 괴짜들이 많기로도 유명합니다. 사실 이들은 창의성이 매우 우수하고 다른 사람들보다 넓게 볼줄 아는 것입니다.<br />
+                                    <br />
+                                    래번클로의 상징인 파란색과 청동색은 마치 바다와 같은 넓고 깊은 지식을 갖고있습니다.
+                                        <div className="Result_sub">
+                                            후플푸프 대표 인물 : 루나 러브굿, 초 챙, 파드마 패틸, 마이클 코너
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        }
+                    }
+                }
         }
     }
 
