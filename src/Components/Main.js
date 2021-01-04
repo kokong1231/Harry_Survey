@@ -9,15 +9,31 @@ class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            page_change: 0
+            page_change: 0,
+            name: ''
         };
     };
 
     handleClick = () => {
-        this.setState(() => {
-            return {page_change: this.state.page_change + 1}
-        })
+        if ( this.state.name === '' ) {
+            return (
+                <div>
+                    {alert("이름을 입력하세요.")}
+                </div>
+            )
+        }
+        else (
+            this.setState(() => {
+                return {page_change: this.state.page_change + 1}
+            })
+        )
     };
+
+    input_value = (e) => {
+        this.setState(() => {
+            return {name: e.target.value}
+        })
+    }
 
     mainPage = () => {
         if ( this.state.page_change === 0 ) {
@@ -42,7 +58,7 @@ class Main extends Component {
                     <div>
                         <div className="Inputbox">
                             <div className="form__group">
-                                <input type="input" className="form__field" placeholder="Name" name="name" id='name' autocomplete="nope" required />
+                                <input type="input" className="form__field" placeholder="Name" name="name" id='name' autocomplete="nope" required onChange={this.input_value} />
                                 <label for="name" className="form__label">이름을 입력하세요. (Please enter your name)</label>
                                 <input className="Namebutton" type="submit" value="시작!" onClick={this.handleClick} />
                             </div>
@@ -54,7 +70,7 @@ class Main extends Component {
 
         else {
             return (
-                <SurveyPage />
+                <SurveyPage name={this.state.name} />
             )
         }
     }

@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import '../App.css';
 import '../App.scss';
 
+
 class SurveyPage extends Component {
 
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             page_change: 0,
             object: null,
@@ -728,7 +729,7 @@ class SurveyPage extends Component {
                         <div className="final_page_griffin">
                             <h1 className="Test_value grifn">그리핀도르</h1>
                             <div className="Result_main">
-                                당신은 그리핀도르와 어울리는 성향을 가졌군요.<br />
+                                {this.props.name}님은 그리핀도르와 어울리는 성향을 가졌군요.<br />
                                 불사조의 기사단과 오러의 다수가 그리핀도르 출신으로 용감함과 정의를 가치있게 생각하는 사람들입니다.
                                 <br /><br />
                                 창립자인 고드릭 그리핀도르는 이렇게 말했습니다. '그 이름에 걸맞는 용기를 가진 아이들은 누구나 가르치도록 하자.'<br />
@@ -750,7 +751,7 @@ class SurveyPage extends Component {
                             <div className="final_page_slytherin">
                                 <h1 className="Test_value sli">슬리데린</h1>
                                 <div className="Result_main">
-                                당신은 슬리데린과 어울리는 성향을 가졌군요.<br />
+                                {this.props.name}님은 슬리데린과 어울리는 성향을 가졌군요.<br />
                                 어둠의 마법사가 가장 많이 배출되었고, 순수혈통이 가장 많은 기숙사입니다.<br />
                                 <br />
                                 창립자인 살라자르 슬리데린는 이렇게 말했습니다. '가장 순수한 혈통을 지닌 이들만 가르치도록 하자.'<br />
@@ -774,7 +775,7 @@ class SurveyPage extends Component {
                                 <div className="final_page_hufflepuf">
                                     <h1 className="Test_value huf">후플푸프</h1>
                                     <div className="Result_main">
-                                    당신은 후플푸프와 어울리는 성향을 가졌군요.<br />
+                                    {this.props.name}님은 후플푸프와 어울리는 성향을 가졌군요.<br />
                                     선량하고 옳다고 생각하는 일에는 망설임 없이 다가갑니다.<br />
                                     <br />
                                     창립자인 헬가 후플푸프는 이렇게 말했습니다. '나는 모든 아이들을 차별없이 가르칠 것이다.'<br />
@@ -798,7 +799,7 @@ class SurveyPage extends Component {
                                 <div className="final_page_ravenclaw">
                                     <h1 className="Test_value rav">래번클로</h1>
                                     <div className="Result_main">
-                                    당신은 래번클로와 어울리는 성향을 가졌군요.<br />
+                                    {this.props.name}님은 래번클로와 어울리는 성향을 가졌군요.<br />
                                     똑똑하고 지혜로우며 현명합니다.<br />
                                     <br />
                                     창립자인 로웨나 래번클로는 이렇게 말했습니다. '가장 똑똑한 아이들만 가르치도록 하자.'<br />
